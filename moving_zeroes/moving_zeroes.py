@@ -2,11 +2,14 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+
+
 def moving_zeroes(arr):
-    arr1=[]
-    numZeros=0
-    test= [0, 3, 1, 0, -2]
-    # for index, item in enumerate(arr):
+    arr1 = []
+    numZeros = 0
+    test = [0, 3, 1, 0, -2]
+    # We walk through arr and check if it is a zero
+    # If it is we add it to our output arr1.
     for item in arr:
         if item == 0:
             numZeros += 1

@@ -3,9 +3,12 @@ Input: a List of integers as well as an integer `k` representing the size of the
 Returns: a List of integers
 '''
 
+# Nums is the array, and k is the size of the slice
+
 
 def sliding_window_max(nums, k):
     # Your code here
+    # Array that holds the maximum
     max_window = []
     if len(nums) < k:
         return -1
@@ -13,19 +16,11 @@ def sliding_window_max(nums, k):
     for index in range(0, len(nums)-k+1):
         left_side = index
         right_side = index + k
+        # Learned the max command from Trystan
+        # For each slice it will determine the larges window in that slice
         max_window.append(max(nums[left_side:right_side]))
 
     return max_window
-
-# for i in rage(0,len(nums)-k+1):
-#     new_window_right=i+k
-#     new_window_left= i
-#     window_max.append(max(nums[new_window_left:new_window_right]))
-    #     if largest_index<left_side:
-    #         largest_index=left_side
-    #     if nums[index]>nums[largest_index]:
-    #         largest_index=index
-    # print(nums[largest_index])
 
 
 if __name__ == '__main__':
